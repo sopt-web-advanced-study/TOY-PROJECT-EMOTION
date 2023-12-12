@@ -11,13 +11,14 @@ export default function CheckFollow() {
         layout="fill"
         objectFit="cover"
         objectPosition="center"
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -100 }}
       />
     </CheckFollowWrapper>
   );
 }
 
 const CheckFollowWrapper = styled.section`
+  position: relative;
   width: 39rem;
   height: 84.4rem;
 `;
