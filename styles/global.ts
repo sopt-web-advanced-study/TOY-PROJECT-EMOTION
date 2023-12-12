@@ -86,9 +86,17 @@ export const reset = css`
   video {
     margin: 0;
     padding: 0;
-    border: 0;
+
     font-size: 62.5%;
     vertical-align: baseline;
+
+    border: 0;
+  }
+
+  body {
+    background: url('/backgroundImg.png') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
   /* HTML5 display-role reset for older browsers */
@@ -130,8 +138,8 @@ export const reset = css`
     content: none;
   }
   table {
-    border-collapse: collapse;
     border-spacing: 0;
+    border-collapse: collapse;
   }
   button {
     cursor: pointer;
@@ -139,39 +147,29 @@ export const reset = css`
     border: none;
   }
 `;
+
 export const GlobalStyle = css`
   ${reset}
-  #root, body, html {
-    max-width: 39rem;
-    margin: 0 auto;
-    -ms-overflow-style: none; /* 인터넷 익스플로러 */
-    scrollbar-width: none; /* 파이어폭스 */
-  }
-
-  #root::-webkit-scrollbar {
-    display: none; /* 크롬, 사파리, 오페라, 엣지 */
-  }
-
   * {
-    box-sizing: border-box;
-    // 버튼 음영 제거
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    // 글자 선택 방지
+    /* 글자 선택 방지 */
     user-select: none;
-    // 링크 터치 금지
+    box-sizing: border-box;
+    /* 버튼 음영 제거 */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    /* 링크 터치 금지 */
     -webkit-touch-callout: none;
   }
 
-  // 사파리 웹 뷰 브라우저 상속 스타일 제거
+  /**사파리 웹 뷰 브라우저 상속 스타일 제거 */
   input,
   textarea,
   button {
-    appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    border-radius: 0;
+    appearance: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
+    border-radius: 0;
   }
 `;
 
