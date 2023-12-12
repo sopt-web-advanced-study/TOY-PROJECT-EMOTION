@@ -8,16 +8,16 @@ export default function CheckFollow() {
       <Image
         src="/background.png"
         alt="배경이미지"
+        layout="fill"
         objectFit="cover"
         objectPosition="center"
-        width={390}
-        height={844}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
       />
     </CheckFollowWrapper>
   );
 }
 
 const CheckFollowWrapper = styled.section`
-  max-width: 39rem;
-  max-height: 84.4rem;
+  width: 39rem;
+  height: 84.4rem;
 `;
