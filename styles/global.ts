@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const reset = css`
   html,
@@ -126,7 +126,7 @@ export const reset = css`
   blockquote:after,
   q:before,
   q:after {
-    content: "";
+    content: '';
     content: none;
   }
   table {
@@ -141,6 +141,17 @@ export const reset = css`
 `;
 export const GlobalStyle = css`
   ${reset}
+  #root, body, html {
+    max-width: 39rem;
+    margin: 0 auto;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+  }
+
+  #root::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+  }
+
   * {
     box-sizing: border-box;
     // 버튼 음영 제거
