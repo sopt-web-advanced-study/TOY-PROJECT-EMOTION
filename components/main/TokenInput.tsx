@@ -14,6 +14,7 @@ const InputToken = styled.input`
 
   width: 29.6rem;
   height: 4.5rem;
+  padding-left: 0.7rem;
 
   border: 1px solid ${({ theme }) => theme.color.grey01};
   border-radius: 5px;
