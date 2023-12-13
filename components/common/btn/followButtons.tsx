@@ -6,14 +6,21 @@ interface FollowBtnProps {
 }
 
 const Follow = styled.button<FollowBtnProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2.5rem;
   padding: 0.7rem 0.9rem;
 
+  font-family: 'SF_HailSnow';
+  font-size: 1rem;
   color: white;
 
   background-color: ${props => props.bgColor};
   border: 1px solid var(--black, #000);
   border-radius: 1.5rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0rem 0.4rem 0rem 0.4rem rgba(0, 0, 0, 0.25);
 `;
 
 const FollowBtn = ({ children, bgColor }: FollowBtnProps) => {
