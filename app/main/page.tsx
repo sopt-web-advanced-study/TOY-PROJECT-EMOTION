@@ -1,7 +1,9 @@
+import MainContainer from '../../components/main/MainContainer';
+
 export default function main() {
   return (
     <>
-      <div>hello</div>
+      <MainContainer />
     </>
   );
 }
