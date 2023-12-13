@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+//Github token 만들러가기
 export default function TokenMakeButton() {
   return (
     <>
