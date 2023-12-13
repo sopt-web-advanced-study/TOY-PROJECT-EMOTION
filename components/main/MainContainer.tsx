@@ -13,8 +13,6 @@ export default function MainContainer() {
       <UserCheckText />
       <TokenInput />
       <ConfrimFollowButton />
-      {/* <Title>OR</Title>
-      <Subtitle>깃허브 로그인으로 간단하게 확인하기 ⬇️️</Subtitle> */}
       <LoginButton />
     </MainContainerStyle>
   );
