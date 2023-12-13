@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Global, ThemeProvider } from "@emotion/react";
-import { RecoilRoot } from "recoil";
-import { GlobalStyle } from "../styles/global";
-import theme from "../styles/theme";
+import { Global, ThemeProvider } from '@emotion/react';
+import { RecoilRoot } from 'recoil';
+import { GlobalStyle } from '../styles/global';
+import theme from '../styles/theme';
 
 export default function Home() {
   return (
