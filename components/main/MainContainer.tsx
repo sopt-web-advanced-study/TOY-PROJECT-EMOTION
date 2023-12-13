@@ -4,17 +4,17 @@ import TokenMakeButton from './TokenMakeButton';
 import TokenInput from './TokenInput';
 import ConfrimFollowButton from './ConfrimFollowButton';
 import LoginButton from './LoginButton';
+import UserCheckText from './UserCheckText';
 
 export default function MainContainer() {
   return (
     <MainContainerStyle>
       <TokenMakeButton />
-      <p>토큰 발급시 권한 user를 체크해주세요!</p>
-      <p>Update ALL user data</p>
+      <UserCheckText />
       <TokenInput />
       <ConfrimFollowButton />
-      <p>OR</p>
-      <p>깃허브 로그인으로 간단하게 확인하기 ⬇️️</p>
+      {/* <Title>OR</Title>
+      <Subtitle>깃허브 로그인으로 간단하게 확인하기 ⬇️️</Subtitle> */}
       <LoginButton />
     </MainContainerStyle>
   );
