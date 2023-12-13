@@ -21,5 +21,8 @@ const ButtonContainer = styled.button`
 
   background-color: ${({ theme }) => theme.color.sub02};
   border: 1px solid ${({ theme }) => theme.color.black};
+  border-radius: 15px;
   box-shadow: 0 4px 4px ${({ theme }) => theme.color.black};
+
+  ${({ theme }) => theme.font.subTitle02};
 `;

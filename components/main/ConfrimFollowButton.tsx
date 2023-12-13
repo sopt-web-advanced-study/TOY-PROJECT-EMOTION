@@ -16,5 +16,7 @@ const Button = styled.button`
 
   background-color: ${({ theme }) => theme.color.sub01};
   border: 2px solid ${({ theme }) => theme.color.grey02};
+  ${({ theme }) => theme.font.title01};
+
   border-radius: 5px;
 `;

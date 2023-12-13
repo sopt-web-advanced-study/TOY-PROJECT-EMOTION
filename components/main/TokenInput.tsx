@@ -17,4 +17,6 @@ const InputToken = styled.input`
 
   border: 1px solid ${({ theme }) => theme.color.grey01};
   border-radius: 5px;
+
+  ${({ theme }) => theme.font.subTitle01};
 `;
