@@ -1,11 +1,13 @@
 'use client';
 import styled from '@emotion/styled';
+import FollowOrNotBtn from '../../components/checkfollow/FollowOrNotBtn';
 import Profile from '../../components/checkfollow/profile';
 
 export default function CheckFollow() {
   return (
     <CheckFollowWrapper>
       <Profile />
+      <FollowOrNotBtn />
     </CheckFollowWrapper>
   );
 }
