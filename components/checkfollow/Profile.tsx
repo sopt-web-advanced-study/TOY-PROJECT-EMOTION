@@ -38,7 +38,7 @@ const ProfileWrapper = styled.section`
   padding: 3rem 2.5rem;
 
   background-color: ${({ theme }) => theme.color.main01};
-  border: 3px solid var(--black, #000);
+  border: 3px solid ${({ theme }) => theme.color.black};
   border-radius: 1rem;
 `;
 
@@ -46,13 +46,14 @@ const ImageWrapper = styled.div`
   width: 40%;
 `;
 
+/** API로 imageUrl 받아온 뒤, Image 태그로 변경 필요 */
 const ProfileImage = styled.div`
   position: absolute;
 
   width: 9rem;
   height: 9rem;
 
-  background-color: gray;
+  background-color: ${({ theme }) => theme.color.grey01};
   border-radius: 50%;
 `;
 
@@ -78,7 +79,7 @@ const ButtonWrapper = styled.div`
   gap: 2.2rem;
 `;
 
-/**임시 버튼 스타일 (공통 컴포넌트 버튼 import 해올 것) */
+/**버튼 컴포넌트 import 후 삭제 예정 */
 const Button = styled.button`
   width: 5.8rem;
   height: 2.5rem;
