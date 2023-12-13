@@ -3,9 +3,9 @@ import styled from '@emotion/styled';
 //Github token 만들러가기
 export default function TokenMakeButton() {
   return (
-    <>
+    <Wrapper>
       <ButtonContainer>Github Token 만들러 가기</ButtonContainer>
-    </>
+    </Wrapper>
   );
 }
 
@@ -25,4 +25,9 @@ const ButtonContainer = styled.button`
   box-shadow: 0 4px 4px ${({ theme }) => theme.color.black};
 
   ${({ theme }) => theme.font.subTitle02};
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 29.6rem;
 `;
