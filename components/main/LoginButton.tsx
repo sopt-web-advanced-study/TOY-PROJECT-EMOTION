@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { St } from '../../styles/common';
+import { St, flexCenter } from '../../styles/common';
+import Image from 'next/image';
 
 export default function LoginButton() {
   return (
@@ -8,7 +9,10 @@ export default function LoginButton() {
         <St.Title>OR</St.Title>
         <St.Subtitle>깃허브 로그인으로 간단하게 확인하기 ⬇️️</St.Subtitle>
       </Wrapper>
-      <ButtonContainer>깃허브 로그인</ButtonContainer>
+      <ButtonContainer>
+        <GithubImg src="/github_emoji.svg" alt="github이모지" width={20} height={20} />
+        깃허브 로그인
+      </ButtonContainer>
     </>
   );
 }
@@ -23,19 +27,15 @@ const Wrapper = styled.article`
   height: 4.8rem;
 `;
 
-const ButtonContainer = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+const ButtonContainer = styled(St.MainButtonContainer)`
   width: 14.1rem;
   height: 3rem;
+`;
 
-  color: ${({ theme }) => theme.color.white};
+const GithubImg = styled(Image)`
+  ${flexCenter}
 
-  background-color: ${({ theme }) => theme.color.sub02};
-  border: 1px solid ${({ theme }) => theme.color.black};
-  ${({ theme }) => theme.font.subTitle02};
-
-  border-radius: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.8rem;
 `;
