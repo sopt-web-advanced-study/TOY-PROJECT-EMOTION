@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
+import { flexCenter } from '../../styles/common';
 
 export default function ConfrimFollowButton() {
   return <Button>나의 맞팔 확인하러 가기</Button>;
 }
 
 const Button = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flexCenter}
 
   width: 29.6rem;
   height: 4.5rem;

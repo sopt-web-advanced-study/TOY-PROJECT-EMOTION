@@ -5,6 +5,7 @@ import TokenInput from './TokenInput';
 import ConfrimFollowButton from './ConfrimFollowButton';
 import LoginButton from './LoginButton';
 import UserCheckText from './UserCheckText';
+import { flexCenter } from '../../styles/common';
 
 export default function MainContainer() {
   return (
@@ -19,11 +20,10 @@ export default function MainContainer() {
 }
 
 const MainContainerStyle = styled.section`
-  display: flex;
+  ${flexCenter}
+
   flex-direction: column;
   gap: 2.4rem;
-  align-items: center;
-  justify-content: center;
 
   width: 34rem;
   height: 45rem;

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { St } from '../../styles/common';
 
 //Github token 만들러가기
 export default function TokenMakeButton() {
@@ -9,22 +10,9 @@ export default function TokenMakeButton() {
   );
 }
 
-const ButtonContainer = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+const ButtonContainer = styled(St.MainButtonContainer)`
   width: 14.1rem;
   height: 2.5rem;
-
-  color: ${({ theme }) => theme.color.white};
-
-  background-color: ${({ theme }) => theme.color.sub02};
-  border: 1px solid ${({ theme }) => theme.color.black};
-  border-radius: 15px;
-  box-shadow: 0 4px 4px ${({ theme }) => theme.color.black};
-
-  ${({ theme }) => theme.font.subTitle02};
 `;
 
 const Wrapper = styled.div`
