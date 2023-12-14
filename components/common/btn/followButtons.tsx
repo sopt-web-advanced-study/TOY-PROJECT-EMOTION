@@ -16,12 +16,13 @@ const Follow = styled.button<InFollowButtonpropsTypes>`
   height: 2.5rem;
   padding: 0.7rem 0.9rem;
 
-  font-family: 'SF_HailSnow';
-  font-size: 1rem;
   color: ${({ theme }) => theme.color.white};
 
   background-color: ${props => props.backgroundColor};
   border: 1px solid var(--black, ${({ theme }) => theme.color.black});
-  border-radius: 1.5rem;
-  box-shadow: 0rem 0.4rem 0rem 0.4rem rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+
+  ${({ theme }) => theme.font.subTitle02};
+
+  box-shadow: 0rem 0.4rem rgba(0, 0, 0, 0.25);
 `;
