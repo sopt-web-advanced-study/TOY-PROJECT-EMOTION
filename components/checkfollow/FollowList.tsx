@@ -1,4 +1,5 @@
 'use client';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import ListElement from './ListElement';
 
@@ -26,16 +27,16 @@ const USER_INFO: userInfoTypes[] = [
 export default function FollowList() {
   return (
     <FollowListWrapper>
-      <FilterBtnWrapper>
+      <div css={FilterBtnWrapper}>
         <SelectBtn>모두 선택</SelectBtn>
         <SelectBtn>모두 해지</SelectBtn>
-      </FilterBtnWrapper>
-      <ListWrapper>
+      </div>
+      <div css={ListWrapper}>
         {USER_INFO.map((userInfo: userInfoTypes) => {
           const { id, userName, imageUrl } = userInfo;
           return <ListElement key={id} id={id} userName={userName} imageUrl={imageUrl} />;
         })}
-      </ListWrapper>
+      </div>
     </FollowListWrapper>
   );
 }
@@ -49,10 +50,10 @@ const FollowListWrapper = styled.section`
 
   background-color: ${({ theme }) => theme.color.main01};
   border: 3px solid ${({ theme }) => theme.color.black};
-  border-radius: 1rem;
+  border-radius: 10px;
 `;
 
-const FilterBtnWrapper = styled.div`
+const FilterBtnWrapper = css`
   display: flex;
   gap: 1.4rem;
   justify-content: flex-end;
@@ -73,7 +74,7 @@ const SelectBtn = styled.button`
   border-radius: 2rem;
 `;
 
-const ListWrapper = styled.div`
+const ListWrapper = css`
   overflow: scroll;
   display: flex;
   flex-direction: column;
