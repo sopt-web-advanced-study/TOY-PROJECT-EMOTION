@@ -1,10 +1,14 @@
 import styled from '@emotion/styled';
 
-interface CategoryBtnProps {
+interface InCategoryButtonpropsType {
   children: React.ReactNode;
 }
 
-const Category = styled.button<CategoryBtnProps>`
+export default function CategoryButtons({ children }: InCategoryButtonpropsType) {
+  return <Category>{children}</Category>;
+}
+
+const Category = styled.button<InCategoryButtonpropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,14 +16,8 @@ const Category = styled.button<CategoryBtnProps>`
   height: 3rem;
   padding: 0.9rem 1.6rem;
 
-  font-size: 1rem;
+  background-color: ${({ theme }) => theme.color.white};
+  border-radius: 10px;
 
-  background-color: white;
-  border-radius: 1rem;
+  ${({ theme }) => theme.font.subTitle02};
 `;
-
-const CategoryBtn = ({ children }: CategoryBtnProps) => {
-  return <Category>{children}</Category>;
-};
-
-export default CategoryBtn;
