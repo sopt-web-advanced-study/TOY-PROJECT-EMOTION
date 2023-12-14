@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 interface InFollowButtonpropsTypes {
-  backgroundColor: string;
+  isFollow: boolean;
   children: React.ReactNode;
 }
 
-export default function FollowButtons({ children, backgroundColor }: InFollowButtonpropsTypes) {
-  return <Follow backgroundColor={backgroundColor}>{children}</Follow>;
+export default function FollowButtons({ children, isFollow }: InFollowButtonpropsTypes) {
+  return <Follow isFollow={isFollow}>{children}</Follow>;
 }
 
 const Follow = styled.button<InFollowButtonpropsTypes>`
@@ -18,7 +18,7 @@ const Follow = styled.button<InFollowButtonpropsTypes>`
 
   color: ${({ theme }) => theme.color.white};
 
-  background-color: ${({ theme, backgroundColor }) => theme.color[backgroundColor as keyof typeof theme.color]};
+  background-color: ${({ isFollow, theme }) => (isFollow ? theme.color.red : theme.color.green)};
   border: 1px solid ${({ theme }) => theme.color.black};
   border-radius: 15px;
 
