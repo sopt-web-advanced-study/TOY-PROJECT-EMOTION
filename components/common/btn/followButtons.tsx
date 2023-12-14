@@ -18,8 +18,8 @@ const Follow = styled.button<InFollowButtonpropsTypes>`
 
   color: ${({ theme }) => theme.color.white};
 
-  background-color: ${props => props.backgroundColor};
-  border: 1px solid var(--black, ${({ theme }) => theme.color.black});
+  background-color: ${({ theme, backgroundColor }) => theme.color[backgroundColor as keyof typeof theme.color]};
+  border: 1px solid ${({ theme }) => theme.color.black};
   border-radius: 15px;
 
   ${({ theme }) => theme.font.subTitle02};

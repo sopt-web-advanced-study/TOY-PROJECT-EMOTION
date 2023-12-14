@@ -17,7 +17,7 @@ const Select = styled.button<InSelectButtonpropsType>`
   padding: 0.7rem 1.1rem;
 
   background-color: ${({ theme }) => theme.color.white};
-  border: 1px solid var(--black, ${({ theme }) => theme.color.black});
+  border: 1px solid ${({ theme }) => theme.color.black};
   border-radius: 15px;
 
   ${({ theme }) => theme.font.subTitle02};
