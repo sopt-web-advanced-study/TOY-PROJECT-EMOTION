@@ -42,9 +42,7 @@
     "space-in-parens": ["error", "never"], // 일반 괄호 앞 뒤 공백 추가,
     "computed-property-spacing": ["error", "never"], // 대괄호 앞 뒤 공백 추가하지 않음,
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-    "react/jsx-filename-extension": [
-      2,
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }]
   }
 }
