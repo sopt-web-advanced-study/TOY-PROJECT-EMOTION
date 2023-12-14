@@ -1,10 +1,14 @@
 import styled from '@emotion/styled';
 
-interface SelectBtnProps {
+interface InSelectButtonpropsType {
   children: React.ReactNode;
 }
 
-const Select = styled.button<SelectBtnProps>`
+export default function SelectButtons({ children }: InSelectButtonpropsType) {
+  return <Select>{children}</Select>;
+}
+
+const Select = styled.button<InSelectButtonpropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,15 +16,9 @@ const Select = styled.button<SelectBtnProps>`
   height: 2.5rem;
   padding: 0.7rem 1.1rem;
 
-  font-size: 1rem;
+  background-color: ${({ theme }) => theme.color.white};
+  border: 1px solid var(--black, ${({ theme }) => theme.color.black});
+  border-radius: 15px;
 
-  background-color: #fff;
-  border: 1px solid var(--black, #000);
-  border-radius: 1.5rem;
+  ${({ theme }) => theme.font.subTitle02};
 `;
-
-const SelectBtn = ({ children }: SelectBtnProps) => {
-  return <Select>{children}</Select>;
-};
-
-export default SelectBtn;
