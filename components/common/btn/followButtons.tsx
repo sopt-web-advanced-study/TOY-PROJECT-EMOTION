@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
-
-interface FollowBtnProps {
-  bgColor: string;
+interface InFollowButtonpropsTypes {
+  backgroundColor: string;
   children: React.ReactNode;
 }
 
-const Follow = styled.button<FollowBtnProps>`
+export default function FollowButtons({ children, backgroundColor }: InFollowButtonpropsTypes) {
+  return <Follow backgroundColor={backgroundColor}>{children}</Follow>;
+}
+
+const Follow = styled.button<InFollowButtonpropsTypes>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,16 +18,10 @@ const Follow = styled.button<FollowBtnProps>`
 
   font-family: 'SF_HailSnow';
   font-size: 1rem;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
 
-  background-color: ${props => props.bgColor};
-  border: 1px solid var(--black, #000);
+  background-color: ${props => props.backgroundColor};
+  border: 1px solid var(--black, ${({ theme }) => theme.color.black});
   border-radius: 1.5rem;
   box-shadow: 0rem 0.4rem 0rem 0.4rem rgba(0, 0, 0, 0.25);
 `;
-
-const FollowBtn = ({ children, bgColor }: FollowBtnProps) => {
-  return <Follow bgColor={bgColor}>{children}</Follow>;
-};
-
-export default FollowBtn;
