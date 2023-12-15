@@ -1,14 +1,15 @@
 'use client';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 export default function FollowOrNotBtn() {
   return (
-    <FollowOrNotBtnWrapper>
+    <section css={FollowOrNotBtnWrapper}>
       <FollowBtn>맞팔한 사람</FollowBtn>
       <FollowBtn>맞팔 아닌 사람</FollowBtn>
-    </FollowOrNotBtnWrapper>
+    </section>
   );
 }
-const FollowOrNotBtnWrapper = styled.div`
+const FollowOrNotBtnWrapper = css`
   display: flex;
   gap: 5rem;
   justify-content: center;

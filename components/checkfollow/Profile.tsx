@@ -1,11 +1,12 @@
 'use client';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 
 export default function Profile() {
   return (
     <ProfileWrapper>
-      <ImageWrapper>
+      <div css={ImageWrapper}>
         <ProfileImage>
           <Image
             src="/santaHatImg.png"
@@ -15,15 +16,15 @@ export default function Profile() {
             style={{ position: 'absolute', top: -20, left: -5, rotate: '340deg' }}
           />
         </ProfileImage>
-      </ImageWrapper>
+      </div>
       <TextWrapper>
         <Name>Name</Name>
         <Bio>Bio</Bio>
-        <ButtonWrapper>
+        <div css={ButtonWrapper}>
           {/* 임시 버튼 스타일 */}
           <Button>팔로워</Button>
           <Button>팔로잉</Button>
-        </ButtonWrapper>
+        </div>
       </TextWrapper>
     </ProfileWrapper>
   );
@@ -39,10 +40,10 @@ const ProfileWrapper = styled.section`
 
   background-color: ${({ theme }) => theme.color.main01};
   border: 3px solid ${({ theme }) => theme.color.black};
-  border-radius: 1rem;
+  border-radius: 10px;
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = css`
   width: 40%;
 `;
 
@@ -74,7 +75,7 @@ const Bio = styled.span`
   ${({ theme }) => theme.font.subTitle01};
 `;
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = css`
   display: flex;
   gap: 2.2rem;
 `;
