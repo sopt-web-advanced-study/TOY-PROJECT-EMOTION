@@ -94,9 +94,11 @@ export const reset = css`
   }
 
   body {
+    margin: 0 auto;
     background: url('/backgroundImg.png') no-repeat center center;
-    background-attachment: fixed;
-    background-size: cover;
+    width: 39rem;
+    letter-spacing: normal;
+    font-family: 'SF_HailSnow';
   }
 
   /* HTML5 display-role reset for older browsers */
