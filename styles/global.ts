@@ -94,9 +94,6 @@ export const reset = css`
   }
 
   body {
-    /* 
-    background-attachment: fixed;
-    background-size: cover; */
     margin: 0 auto;
     background: url('/backgroundImg.png') no-repeat center center;
     width: 39rem;

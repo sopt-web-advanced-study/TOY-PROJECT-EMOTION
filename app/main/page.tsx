@@ -19,7 +19,7 @@ const Wrapper = styled.section`
 
   flex-direction: column;
   width: 100%;
-  height: 844px;
+  height: 84.4rem;
 `;
 
 const SantaHatImg = styled(Image)`
